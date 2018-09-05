@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <title>UGWA Lite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="A lightweight version of the Unofficial Gunn Web App.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#ff594c">
+
+    <link rel="manifest" href="../favicon/manifest-lite.json">
+    <link rel="shortcut icon" href="../favicon/favicon.ico">
+    <meta name="msapplication-config" content="../favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ff594c">
+
+    <meta property="og:title" content="Ugwita"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://orbiit.github.io/gunn-web-app/lite/"/>
+    <meta property="og:description" content="A lightweight version of the Unofficial Gunn Web App."/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Ugwita"/>
+    <meta name="twitter:description" content="A lightweight version of the Unofficial Gunn Web App."/>
+
+    <link rel="stylesheet" href="pretty.css">
+    <script src="../js/altScheduleGenerator.js" charset="utf-8"></script>
+    <script src="data.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <p id="timeleft"></p>
+    <div><button type="button" id="yesterday">&lt;</button><button type="button" id="dateselect">Select date</button><button type="button" id="tomorrow">&gt;</button></div>
+    <div id="dateselectwrapper">
+      <p><label>Select month:</label><select id="monthselect"></select><button type="button" id="monthselectdone">Select</button></p>
+      <p><label>Select date:</label><input type="number" id="dateinput"><button type="button" id="dateinputdone">Select</button><span id="dateinputerror"></span></p>
+      <button type="button" id="dateselectcancel">Cancel</button>
+    </div>
+    <div id="schedule"></div>
+    <div id="settings">
+      <h2>Settings</h2>
+      <p><button type="button" id="refreshalts">Refresh alternate schedules</button></p>
+      <p><input type="checkbox" name="offline" id="offline"><label for="offline">Work offline? (works only on <a href="https://caniuse.com/#feat=serviceworkers">these browsers</a> &mdash; don't uncheck while offline! :P)</label></p>
+      <p><input type="checkbox" name="theme" id="theme"><label for="theme">Dark theme?</label></p>
+    </div>
+    <div id="notes">
+      <h2>Notes</h2>
+      <textarea id="notesinput"></textarea>
+    </div>
+  </body>
+</html>
